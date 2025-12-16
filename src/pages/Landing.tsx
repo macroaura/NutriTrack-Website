@@ -307,9 +307,9 @@ export default function Landing() {
                     className="text-center lg:text-right"
                   >
 
-                    <h3 className="text-3xl font-display font-bold text-gray-900 mb-4">Track macros app</h3>
+                    <h3 className="text-3xl font-display font-bold text-gray-900 mb-4">Daily Food Diary</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                      Snap barcodes, speak your foods, or tap quick-add. Our track macros app makes logging easier and faster than ever.
+                      Discover what fuels you best. A complete calorie and macro tracker tailored to your lifestyle.
                     </p>
                   </motion.div>
                   <motion.div
@@ -336,10 +336,10 @@ export default function Landing() {
                     className="order-1 lg:order-2 text-center lg:text-left"
                   >
                     <h3 className="text-3xl font-display font-bold text-gray-900 mb-4">
-                      Protein tracker app
+                      Weight tracker app
                     </h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                      Charts, streaks, and insights that keep you on track. The perfect protein tracker app for hitting your daily goals.
+                      Charts, streaks, and insights that keep you on track. The perfect weight tracker app for hitting your daily goals.
                     </p>
                   </motion.div>
 
@@ -371,9 +371,9 @@ export default function Landing() {
                     className="text-center lg:text-right"
                   >
 
-                    <h3 className="text-3xl font-display font-bold text-gray-900 mb-4">Calorie and macro tracker</h3>
+                    <h3 className="text-3xl font-display font-bold text-gray-900 mb-4">Your Food Database, On Demand</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                      Discover what fuels you best. A complete calorie and macro tracker tailored to your lifestyle.
+                      Search thousands of foods, pick the right match, and add it your daily diary with one tap.
                     </p>
                   </motion.div>
                   <motion.div
