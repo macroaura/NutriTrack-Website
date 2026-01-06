@@ -36,7 +36,7 @@ export default function Navbar() {
             Contact
           </NavLink>
           <a
-            href="https://testflight.apple.com/join/uhsJJhnK"
+            href="https://testflight.apple.com/join/GKZqpGB6"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Download the MacroAura iOS TestFlight beta"

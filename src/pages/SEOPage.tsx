@@ -87,7 +87,7 @@ export default function SEOPage({ data }: SEOPageProps) {
                             className="mt-10"
                         >
                             <a
-                                href="https://testflight.apple.com/join/uhsJJhnK"
+                                href="https://testflight.apple.com/join/GKZqpGB6"
                                 target='_blank'
                                 rel="noopener noreferrer"
                                 onClick={() => {
@@ -182,7 +182,7 @@ export default function SEOPage({ data }: SEOPageProps) {
                             Ready to hit your goals?
                         </h2>
                         <a
-                            href="https://testflight.apple.com/join/uhsJJhnK"
+                            href="https://testflight.apple.com/join/GKZqpGB6"
                             target='_blank'
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-bold text-gray-900 shadow-lg transition-all duration-300 hover:bg-gray-100 hover:-translate-y-1"

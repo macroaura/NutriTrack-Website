@@ -145,7 +145,7 @@ export default function Landing() {
                   className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 >
                   <a
-                    href="https://testflight.apple.com/join/uhsJJhnK"
+                    href="https://testflight.apple.com/join/GKZqpGB6"
                     target='_blank'
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-full bg-gray-900 px-8 py-4 text-base font-bold text-white shadow-xl transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:-translate-y-1 hover:scale-105"
@@ -480,7 +480,7 @@ export default function Landing() {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    href="https://testflight.apple.com/join/uhsJJhnK"
+                    href="https://testflight.apple.com/join/GKZqpGB6"
                     className="rounded-full bg-white px-8 py-4 text-lg font-bold text-black hover:text-white shadow-lg transition-all duration-300 hover:bg-main-dark hover:shadow-xl"
                     onClick={() => {
                       if (import.meta.env.PROD) {
