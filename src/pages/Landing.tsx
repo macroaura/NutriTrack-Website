@@ -127,7 +127,7 @@ export default function Landing() {
                 >
                   The simple <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-main to-main-dark">
-                    macro app.
+                    macro .
                   </span>
                 </motion.h1>
                 <motion.p
@@ -229,12 +229,12 @@ export default function Landing() {
             >
               {[
                 {
-                  title: "Daily macros log",
+                  title: "Daily Macro Log",
                   desc: "Save time with quick-add foods and recent meals.",
                   icon: "fa-bolt"
                 },
                 {
-                  title: "Macro insights",
+                  title: "Macro Insights",
                   desc: "Understand protein, carbs, fats, and calories at a glance.",
                   icon: "fa-chart-pie"
                 },
@@ -244,12 +244,12 @@ export default function Landing() {
                   icon: "fa-fire"
                 },
                 {
-                  title: "Macro calculator",
+                  title: "Macro Calculator",
                   desc: "Calibrated to your goals: cut, bulk, or maintain.",
                   icon: "fa-bullseye"
                 },
                 {
-                  title: "Privacy-first",
+                  title: "Privacy-First",
                   desc: "Your data stays yours. Export or delete anytime.",
                   icon: "fa-lock"
                 },
@@ -336,7 +336,7 @@ export default function Landing() {
                     className="order-1 lg:order-2 text-center lg:text-left"
                   >
                     <h3 className="text-3xl font-display font-bold text-gray-900 mb-4">
-                      Weight tracker app
+                      Weight Tracker App
                     </h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
                       Charts, streaks, and insights that keep you on track. The perfect weight tracker app for hitting your daily goals.
