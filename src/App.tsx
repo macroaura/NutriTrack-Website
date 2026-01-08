@@ -10,6 +10,7 @@ import TermsOfService from './pages/TermsOfService'
 import Contact from './components/Contact'
 import SEOPage from './pages/SEOPage'
 import { seoPages } from './data/seo-pages'
+import AuthAction from './pages/AuthAction'
 
 function GAListener() {
   const location = useLocation()
@@ -19,6 +20,10 @@ function GAListener() {
     case '/privacy':
       title = 'Privacy • MacroAura'
       description = 'Learn how MacroAura protects your privacy and handles your data responsibly.'
+      break
+    case '/auth/action':
+      title = 'Auth Action • MacroAura'
+      description = 'Handle Firebase auth actions like reset password and verify email.'
       break
     case '/support-center':
       title = 'Support • MacroAura'
@@ -83,6 +88,7 @@ export default function App() {
         <GAListener />
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/auth/action" element={<AuthAction />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/support-center" element={<Support />} />
           <Route path='/terms-of-service' element={<TermsOfService />} />
