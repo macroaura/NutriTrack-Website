@@ -18,7 +18,7 @@ export default function TermsOfService() {
                 <meta property="og:url" content="https://www.macroaura.com/terms-of-service" />
                 <meta property="og:title" content="Terms of Service • MacroAura" />
                 <meta property="og:description" content="Read the MacroAura Terms of Service covering eligibility, account use, acceptable use, third‑party services, health disclaimers, and dispute resolution." />
-                <meta property="og:image" content="https://www.macroaura.com/logo-green.jpg" />
+                <meta property="og:image" content="https://www.macroaura.com/logo-small.png" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:site_name" content="MacroAura" />
@@ -27,7 +27,7 @@ export default function TermsOfService() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Terms of Service • MacroAura" />
                 <meta name="twitter:description" content="Read the MacroAura Terms of Service covering eligibility, account use, acceptable use, third‑party services, health disclaimers, and dispute resolution." />
-                <meta name="twitter:image" content="https://www.macroaura.com/logo-green.jpg" />
+                <meta name="twitter:image" content="https://www.macroaura.com/logo-small.png" />
                 {/* JSON-LD: TermsOfService */}
                 <script type="application/ld+json">
                     {JSON.stringify({
@@ -43,7 +43,7 @@ export default function TermsOfService() {
                             "url": "https://www.macroaura.com",
                             "logo": {
                                 "@type": "ImageObject",
-                                "url": "https://www.macroaura.com/logo-green.jpg"
+                                "url": "https://www.macroaura.com/logo-small.png"
                             }
                         },
                         "description": "Terms governing the use of MacroAura apps and website."

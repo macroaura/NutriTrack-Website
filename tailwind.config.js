@@ -7,8 +7,8 @@ export default {
     theme: {
         extend: {
             colors: {
-                main: '#2ECC71', // Vibrant Green
-                'main-dark': '#27AE60',
+                main: '#00C853', // Vibrant Green
+                'main-dark': '#00C853',
                 accent: '#FF7F11', // Orange accent
                 surface: '#F3F4F6', // Light gray surface
             },

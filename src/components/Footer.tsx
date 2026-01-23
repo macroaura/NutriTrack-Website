@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           <div className="flex items-center gap-2">
-            <img src="/logo-green.jpg" alt="MacroAura" className="h-8 w-8 rounded-lg" />
+            <img src="/logo-small.png" alt="MacroAura" className="h-8 w-8 rounded-lg" />
             <span className="text-lg font-display font-bold text-gray-900">MacroAura</span>
           </div>
           <div className="flex flex-wrap justify-center gap-8 text-sm font-medium text-gray-600">
