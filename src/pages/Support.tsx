@@ -314,7 +314,7 @@ export default function Support() {
                 <meta property="og:description" content="Get help with MacroAura: browse FAQs or contact support for account, food logging, AI, billing, and more." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.macroaura.com/support-center" />
-                <meta property="og:image" content="https://www.macroaura.com/logo-green.jpg" />
+                <meta property="og:image" content="https://www.macroaura.com/logo-small.png" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:site_name" content="MacroAura" />
@@ -322,7 +322,7 @@ export default function Support() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="MacroAura Support Center – Help &amp; Contact" />
                 <meta name="twitter:description" content="Get help with MacroAura: browse FAQs or contact support for account, food logging, AI, billing, and more." />
-                <meta name="twitter:image" content="https://www.macroaura.com/logo-green.jpg" />
+                <meta name="twitter:image" content="https://www.macroaura.com/logo-small.png" />
                 {/* WebPage JSON-LD */}
                 <script type="application/ld+json">
                     {JSON.stringify({

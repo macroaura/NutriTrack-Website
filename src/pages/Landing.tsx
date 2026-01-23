@@ -34,7 +34,7 @@ export default function Landing() {
         <meta property="og:url" content="https://www.macroaura.com/" />
         <meta property="og:title" content="MacroAura — Macro Counter & Protein Tracker App" />
         <meta property="og:description" content="MacroAura is the ultimate calorie and macro tracker. Use our daily macros log, macro calculator, and diet app features to build better habits." />
-        <meta property="og:image" content="https://www.macroaura.com/logo-green.jpg" />
+        <meta property="og:image" content="https://www.macroaura.com/logo-small.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         {/* Twitter Card */}
@@ -42,7 +42,7 @@ export default function Landing() {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:title" content="MacroAura — Macro Counter & Protein Tracker App" />
         <meta name="twitter:description" content="MacroAura is the ultimate calorie and macro tracker. Use our daily macros log, macro calculator, and diet app features to build better habits." />
-        <meta name="twitter:image" content="https://www.macroaura.com/logo-green.jpg" />
+        <meta name="twitter:image" content="https://www.macroaura.com/logo-small.png" />
         <meta name="keywords" content="macro counter, macro app, track macros app, macro calculator, daily macros log, macro diet app, protein tracker app, calorie and macro tracker, weight tracker" />
         {/* JSON-LD Organization & SoftwareApplication Schema */}
         <script type="application/ld+json">
@@ -64,7 +64,7 @@ export default function Landing() {
                   "@type": "Organization",
                   "name": "MacroAura",
                   "url": "https://www.macroaura.com/",
-                  "logo": "https://www.macroaura.com/logo-green.jpg",
+                  "logo": "https://www.macroaura.com/logo-small.png",
                   "description": "MacroAura helps you log meals, analyze macros, and build better nutrition habits with personalized insights.",
                   "sameAs": [
                     "https://twitter.com/macroaura.co",
@@ -408,7 +408,7 @@ export default function Landing() {
                   {/* Placeholder for HealthKit visual */}
                   <div className="flex justify-center items-center space-x-8 mb-8">
                     <div className="h-20 w-20 rounded-2xl shadow-sm flex items-center justify-center">
-                      <img src="logo-green.jpg" alt="MacroAura Logo" className="w-20 h-20 rounded-2xl " />
+                      <img src="/logo-small.png" alt="MacroAura Logo" className="w-20 h-20 rounded-2xl " />
                     </div>
                     <i className="fas fa-exchange-alt text-gray-300 text-2xl"></i>
                     <div className="h-20 w-20 bg-white rounded-2xl shadow-sm flex items-center justify-center text-red-500">
@@ -460,7 +460,7 @@ export default function Landing() {
         </section>
 
         {/* CTA */}
-        <section id="cta" className="py-24 bg-main/80 ">
+        <section id="cta" className="py-24 bg-main/90 ">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
