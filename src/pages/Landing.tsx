@@ -125,9 +125,9 @@ export default function Landing() {
                   variants={fadeInUp}
                   className="text-5xl font-display font-extrabold tracking-tight text-gray-900 sm:text-6xl md:text-7xl mb-6 leading-tight"
                 >
-                  The simple <br />
+                  Tracking made <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-main to-main-dark">
-                    macro .
+                    easy .
                   </span>
                 </motion.h1>
                 <motion.p
@@ -393,69 +393,85 @@ export default function Landing() {
           </div>
         </section>
 
-        {/* Apple HealthKit Section */}
+        {/* Integrations Section */}
         <section className="py-24 bg-white overflow-hidden">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-gray-900 p-10  md:rounded-2xl">
-            <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-                className="lg:col-span-6 order-2 lg:order-1 mt-10 lg:mt-0"
-              >
-                <div className="relative rounded-3xl p-8">
-                  {/* Placeholder for HealthKit visual */}
-                  <div className="flex justify-center items-center space-x-8 mb-8">
-                    <div className="h-20 w-20 rounded-2xl shadow-sm flex items-center justify-center">
-                      <img src="/logo-small.png" alt="MacroAura Logo" className="w-20 h-20 rounded-2xl " />
-                    </div>
-                    <i className="fas fa-exchange-alt text-gray-300 text-2xl"></i>
-                    <div className="h-20 w-20 bg-white rounded-2xl shadow-sm flex items-center justify-center text-red-500">
-                      <img src="Apple_Health.webp" alt="Apple Health" className="w-20 h-20" />
-                    </div>
-                  </div>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-gray-900 p-10 md:p-16 md:rounded-2xl">
+            {/* Section Header */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl font-display font-bold text-white sm:text-4xl lg:text-5xl mb-4">
+                Connects with your <span className="text-transparent bg-clip-text bg-gradient-to-r from-main to-main-dark">favorites</span>
+              </h2>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              MacroAura connects with Apple Health and Garmin to sync your activity data and dynamically adjust your nutrition targets based on how you actually move.
+              </p>
+            </motion.div>
 
+            {/* Integration Visual */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              className="flex flex-col items-center mb-14"
+            >
+              <div className="flex items-center justify-center gap-6 sm:gap-10">
+                <div className="flex flex-col items-center gap-2">
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 bg-white rounded-2xl shadow-sm flex items-center justify-center">
+                    <img src="Apple_Health.webp" alt="Apple Health" className="w-16 h-16 sm:w-20 sm:h-20" />
+                  </div>
+                  <span className="text-xs text-gray-400 font-medium">Apple Health</span>
                 </div>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-                className="lg:col-span-6 order-1 lg:order-2 text-center lg:text-left"
-              >
-                <div className="hidden md:inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-red-50 text-red-500 text-3xl mb-8">
-                  <img src="Apple_Health.webp" alt="Apple Health" className="w-16 h-16 rounded-2xl" />
+                <i className="fas fa-arrows-alt-h text-gray-500 text-xl sm:text-2xl"></i>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl shadow-lg flex items-center justify-center ring-2 ring-main/30">
+                    <img src="/logo-small.png" alt="MacroAura" className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl" />
+                  </div>
+                  <span className="text-xs text-gray-400 font-medium">MacroAura</span>
                 </div>
-                <h2 className="text-3xl font-display font-bold text-white sm:text-4xl mb-6">
-                  Works perfectly with <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-600">Apple Health</span>
-                </h2>
-                <p className="text-lg text-white leading-relaxed mb-8">
-                  MacroAura syncs seamlessly with Apple Health. Your steps and active energy are automatically imported to adjust your daily targets, while your nutrition data flows back to keep everything in sync.
-                </p>
-                <ul className="space-y-4 text-left mx-auto lg:mx-0 max-w-md">
-                  {[
-                    "Automatic calorie adjustments based on activity",
-                    "Syncs nutrients to Health app",
-                    "Privacy-focused local integration"
-                  ].map((item, i) => (
-                    <motion.li
-                      key={i}
-                      className="flex items-center text-white"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.1 + 0.3 }}
-                      viewport={{ once: true }}
-                    >
-                      <i className="fas fa-check-circle text-main mr-3"></i>
-                      {item}
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            </div>
+                <i className="fas fa-arrows-alt-h text-gray-500 text-xl sm:text-2xl"></i>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 bg-white rounded-2xl shadow-sm flex items-center justify-center">
+                    <img src="/garmin.png" alt="Garmin" className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl" />
+                  </div>
+                  <span className="text-xs text-gray-400 font-medium">Garmin</span>
+                </div>
+              </div>
+            </motion.div>
+
+            
+
+            {/* Shared Features */}
+            <motion.ul
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4"
+            >
+              {[
+                { icon: "fas fa-sync-alt", text: "Sync calorie burn for smart target adjustments - Your nutrition goals adapt automatically based on your actual energy expenditure" },
+                { icon: "fas fa-chart-line", text: "Import workout sessions and add custom exercise details - Bring in your workouts, then log specific exercises with sets, reps, and weights" },
+                { icon: "fas fa-shield-alt", text: "Track steps to optimize daily activity goals - Step data flows seamlessly to keep your targets aligned with your lifestyle" }
+              ].map((item, i) => (
+                <motion.li
+                  key={i}
+                  className="flex items-center gap-3 bg-gray-800/40 rounded-xl px-5 py-4"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 + 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <i className={`${item.icon} text-main flex-shrink-0`}></i>
+                  <span className="text-gray-300 text-sm">{item.text}</span>
+                </motion.li>
+              ))}
+            </motion.ul>
           </div>
         </section>
 
