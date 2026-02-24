@@ -8,7 +8,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 cursor-pointer group">
           {/* Placeholder logo */}
           <img
-            src="/logo-small.png"
+            src="/main-logo.png"
             alt="MacroAura logo"
             width={40}
             height={40}
