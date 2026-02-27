@@ -117,7 +117,7 @@ export default function Landing() {
                   className="inline-flex items-center rounded-full border border-main/30 bg-white/50 backdrop-blur-sm px-3 py-1 text-sm font-medium text-main-dark mb-8 shadow-sm"
                 >
                   <span className="flex h-2 w-2 rounded-full bg-main mr-2 animate-pulse"></span>
-                  Now available in Beta
+                  Now on the App Store
                 </motion.div>
                 <motion.h1
                   initial="hidden"
@@ -145,13 +145,13 @@ export default function Landing() {
                   className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 >
                   <a
-                    href="https://testflight.apple.com/join/GKZqpGB6"
+                    href="https://apps.apple.com/us/app/macroaura/id6757357405"
                     target='_blank'
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-full bg-gray-900 px-8 py-4 text-base font-bold text-white shadow-xl transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:-translate-y-1 hover:scale-105"
                   >
                     <i className="fab fa-apple mr-2 text-xl"></i>
-                    Download Beta
+                    Download App
                   </a>
                   <a
                     href="#features"
@@ -496,18 +496,18 @@ export default function Landing() {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    href="https://testflight.apple.com/join/GKZqpGB6"
+                    href="https://apps.apple.com/us/app/macroaura/id6757357405"
                     className="rounded-full bg-white px-8 py-4 text-lg font-bold text-black hover:text-white shadow-lg transition-all duration-300 hover:bg-main-dark hover:shadow-xl"
                     onClick={() => {
                       if (import.meta.env.PROD) {
                         gaEvent('click', {
-                          label: 'Join Beta Link',
+                          label: 'App Store Link',
                           location: 'CTA Section',
                         });
                       }
                     }}
                   >
-                    Join our Beta
+                    Get the App
                   </motion.a>
                 </div>
               </div>

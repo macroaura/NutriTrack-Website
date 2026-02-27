@@ -36,21 +36,21 @@ export default function Navbar() {
             Contact
           </NavLink>
           <a
-            href="https://testflight.apple.com/join/GKZqpGB6"
+            href="https://apps.apple.com/us/app/macroaura/id6757357405"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Download the MacroAura iOS TestFlight beta"
+            aria-label="Download MacroAura on the App Store"
             onClick={() => {
               if (import.meta.env.PROD) {
                 gaEvent('click', {
-                  label: 'Download Beta Link',
+                  label: 'App Store Link',
                   location: 'Navbar',
                 });
               }
             }}
             className="rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
           >
-            Download Beta
+            Download App
           </a>
         </nav>
       </div>
