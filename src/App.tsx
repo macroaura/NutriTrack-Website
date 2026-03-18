@@ -11,6 +11,7 @@ import Contact from './components/Contact'
 import SEOPage from './pages/SEOPage'
 import { seoPages } from './data/seo-pages'
 import AuthAction from './pages/AuthAction'
+import ActivityPage from './pages/ActivityPage'
 
 function GAListener() {
   const location = useLocation()
@@ -38,6 +39,12 @@ function GAListener() {
       description = 'Reach out to MacroAura’s team for questions, feedback, or support.'
       break
     default:
+      // Check if it's a shared activity page
+      if (path.startsWith('/activity/')) {
+        title = 'Workout • MacroAura'
+        description = 'View this workout on MacroAura.'
+        break
+      }
       // Check if it's an SEO page
       const seoPage = seoPages.find(page => `/${page.slug}` === path);
       if (seoPage) {
@@ -93,6 +100,9 @@ export default function App() {
           <Route path="/support-center" element={<Support />} />
           <Route path='/terms-of-service' element={<TermsOfService />} />
           <Route path="/contact-us" element={<Contact />} />
+
+          {/* Shared workout pages */}
+          <Route path="/activity/:shareToken" element={<ActivityPage />} />
 
           {/* SEO Landing Pages */}
           {seoPages.map((page) => (
