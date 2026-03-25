@@ -11,6 +11,12 @@ export interface MileMarker {
   cumulativeSec: number
 }
 
+interface ReplayMileThreshold {
+  mile: number
+  splitSec: number
+  position: number
+}
+
 interface RouteMapProps {
   coordinates: LatLng[]
   rawCoordinates?: number[][]   // [lat, lng, timestamp] — enables animated replay
@@ -75,6 +81,50 @@ function haversineMeters(a: [number, number], b: [number, number]): number {
   const dLat = lat2 - lat1, dLng = lng2 - lng1
   const x = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2
   return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x))
+}
+
+/**
+ * Map each mile marker to the replay position where the route first reaches
+ * that distance. This keeps toast ordering tied to route progress rather than
+ * raw point proximity, which can drift around interpolated markers.
+ */
+function buildReplayMileThresholds(raw: number[][], mileMarkers: MileMarker[]): ReplayMileThreshold[] {
+  if (raw.length < 2 || mileMarkers.length === 0) return []
+
+  const sortedMarkers = [...mileMarkers].sort((a, b) => a.mile - b.mile)
+  const thresholds: ReplayMileThreshold[] = []
+  let markerIdx = 0
+  let cumDist = 0
+
+  for (let i = 1; i < raw.length && markerIdx < sortedMarkers.length; i++) {
+    const prevPt: [number, number] = [raw[i - 1][1], raw[i - 1][0]]
+    const nextPt: [number, number] = [raw[i][1], raw[i][0]]
+    const seg = haversineMeters(prevPt, nextPt)
+    const prevCumDist = cumDist
+    cumDist += seg
+
+    while (markerIdx < sortedMarkers.length && cumDist >= sortedMarkers[markerIdx].mile * METERS_PER_MILE) {
+      const targetDist = sortedMarkers[markerIdx].mile * METERS_PER_MILE
+      const ratio = seg > 0 ? (targetDist - prevCumDist) / seg : 0
+      thresholds.push({
+        mile: sortedMarkers[markerIdx].mile,
+        splitSec: sortedMarkers[markerIdx].splitSec,
+        position: (i - 1) + Math.max(0, Math.min(1, ratio)),
+      })
+      markerIdx++
+    }
+  }
+
+  while (markerIdx < sortedMarkers.length) {
+    thresholds.push({
+      mile: sortedMarkers[markerIdx].mile,
+      splitSec: sortedMarkers[markerIdx].splitSec,
+      position: raw.length - 1,
+    })
+    markerIdx++
+  }
+
+  return thresholds
 }
 
 /** Lerp between two hex colors by t (0–1) */
@@ -388,7 +438,8 @@ export default function RouteMap({
   const boundsRef = useRef<mapboxgl.LngLatBounds | null>(null)
   const lastBearingRef = useRef<number>(0)
   const lastCameraUpdateRef = useRef<number>(0)
-  const lastMilePassedRef = useRef<number>(0) // last mile marker already toasted
+  const mileThresholdsRef = useRef<ReplayMileThreshold[]>([])
+  const nextMileToastIdxRef = useRef(0)
 
   // Mile toast state
   interface MileToast { mile: number; pace: string }
@@ -406,6 +457,10 @@ export default function RouteMap({
   useEffect(() => { markersRef.current = mileMarkers }, [mileMarkers])
   useEffect(() => { terrainRef.current = terrain }, [terrain])
   useEffect(() => { rawRef.current = rawCoordinates }, [rawCoordinates])
+  useEffect(() => {
+    mileThresholdsRef.current = rawCoordinates ? buildReplayMileThresholds(rawCoordinates, mileMarkers) : []
+    nextMileToastIdxRef.current = 0
+  }, [rawCoordinates, mileMarkers])
 
   // Build lngLats from rawCoordinates for replay (has timestamps)
   // Falls back to coordinates if raw not available
@@ -475,23 +530,14 @@ export default function RouteMap({
       dotMarkerRef.current.setLngLat(head)
     }
 
-    // Mile toast — find the closest lngLat index for each marker and fire when dot passes it
-    if (followCamera && markersRef.current.length > 0) {
-      const markers = markersRef.current
-      for (const m of markers) {
-        if (m.mile <= lastMilePassedRef.current) continue
-        // Find the index in lngLats closest to this mile marker's position
-        const mIdx = lngLats.findIndex(
-          pt => Math.abs(pt[0] - m.lngLat[0]) < 0.0003 && Math.abs(pt[1] - m.lngLat[1]) < 0.0003
-        )
-        const threshold = mIdx >= 0 ? mIdx : Math.round((m.mile / (markers[markers.length - 1].mile + 1)) * lngLats.length)
-        if (idx >= threshold) {
-          lastMilePassedRef.current = m.mile
-          if (toastTimerRef.current) clearTimeout(toastTimerRef.current)
-          setMileToast({ mile: m.mile, pace: formatPace(m.splitSec) })
-          toastTimerRef.current = setTimeout(() => setMileToast(null), 3500)
-          break
-        }
+    // Mile toast — tied to cumulative route distance so markers always fire in order.
+    if (followCamera) {
+      const nextThreshold = mileThresholdsRef.current[nextMileToastIdxRef.current]
+      if (nextThreshold && exact >= nextThreshold.position) {
+        nextMileToastIdxRef.current += 1
+        if (toastTimerRef.current) clearTimeout(toastTimerRef.current)
+        setMileToast({ mile: nextThreshold.mile, pace: formatPace(nextThreshold.splitSec) })
+        toastTimerRef.current = setTimeout(() => setMileToast(null), 3500)
       }
     }
 
@@ -527,6 +573,16 @@ export default function RouteMap({
 
     const lngLats = replayLngLats
     const totalPoints = lngLats?.length ?? 0
+    const startExact = totalPoints > 1 ? startP * (totalPoints - 1) : 0
+
+    let nextToastIdx = 0
+    while (
+      nextToastIdx < mileThresholdsRef.current.length &&
+      mileThresholdsRef.current[nextToastIdx].position <= startExact
+    ) {
+      nextToastIdx++
+    }
+    nextMileToastIdxRef.current = nextToastIdx
 
     // Scale duration to keep a consistent points-per-second feel
     const replayDurationMs = Math.min(
@@ -542,7 +598,6 @@ export default function RouteMap({
       const initialBearing = smoothBearing(lngLats, startIdx)
       lastBearingRef.current = initialBearing
       lastCameraUpdateRef.current = 0
-      lastMilePassedRef.current = 0
 
       // Step 1 — pull back to overhead view (0.6s)
       map.easeTo({
