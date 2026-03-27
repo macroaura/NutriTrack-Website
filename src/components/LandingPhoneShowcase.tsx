@@ -82,19 +82,19 @@ export default function LandingPhoneShowcase() {
                 <div className="pointer-events-none absolute bottom-0 left-[49%] h-14 w-[98%] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.24)_0%,rgba(0,0,0,0.12)_42%,rgba(0,0,0,0)_74%)] blur-2xl lg:left-[48%]" />
 
                 <img
-                  src="/app-img-search.png"
+                  src="https://web.macroaura.com/public/app-img-search.png"
                   alt="MacroAura search screen"
                   loading="lazy"
                   className={`${stackedPhoneClass} right-[-18%] z-10 w-[8.75rem] sm:right-[-18%] sm:w-[10.25rem] md:right-[-20%] md:w-[12rem] lg:right-[-20%] lg:w-[14.25rem] xl:right-[-24%] xl:w-[19rem] xl:-translate-y-5`}
                 />
                 <img
-                  src="/app-exercise.png"
+                  src="https://web.macroaura.com/public/app-exercise.png"
                   alt="MacroAura exercise screen"
                   loading="lazy"
                   className={`${stackedPhoneClass} left-[35%] z-20 w-[9.6rem] sm:w-[10.5rem] md:w-[12.4rem] lg:w-[14.6rem] xl:w-[21rem] xl:-translate-y-5`}
                 />
                 <img
-                  src="/app-home.png"
+                  src="https://web.macroaura.com/public/app-home.png"
                   alt="MacroAura home screen"
                   loading="lazy"
                   className={`${stackedPhoneClass} left-0 z-30 w-[10.4rem] sm:w-[12.2rem] sm:-translate-y-5 md:w-[14.2rem] md:-translate-y-7 lg:w-[16.7rem] lg:-translate-y-10 xl:w-[23rem] xl:-translate-y-5`}

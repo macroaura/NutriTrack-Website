@@ -20,7 +20,7 @@ export default function Privacy() {
           content="Learn how MacroAura collects, uses, and protects your data. We value your privacy—no data selling, full deletion on account removal, and secure storage. Read our Privacy Policy for details."
         />
         <meta property="og:url" content="https://www.macroaura.com/privacy" />
-        <meta property="og:image" content="https://www.macroaura.com/logo-small.png" />
+        <meta property="og:image" content="https://web.macroaura.com/public/logo-small.png" />
         <meta property="og:type" content="website" />
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -30,7 +30,7 @@ export default function Privacy() {
           content="Learn how MacroAura collects, uses, and protects your data. We value your privacy—no data selling, full deletion on account removal, and secure storage. Read our Privacy Policy for details."
         />
         <meta name="twitter:url" content="https://www.macroaura.com/privacy" />
-        <meta name="twitter:image" content="https://www.macroaura.com/logo-small.png" />
+        <meta name="twitter:image" content="https://web.macroaura.com/public/logo-small.png" />
         {/* JSON-LD structured data */}
         <script type="application/ld+json">
           {`
@@ -47,7 +47,7 @@ export default function Privacy() {
                 "url": "https://www.macroaura.com",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://www.macroaura.com/logo-small.png"
+                  "url": "https://web.macroaura.com/public/logo-small.png"
                 }
               }
             }

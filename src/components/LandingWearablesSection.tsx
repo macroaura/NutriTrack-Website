@@ -61,7 +61,7 @@ export default function LandingWearablesSection() {
             <div className="pointer-events-none absolute inset-x-[12%] bottom-[6%] h-12 rounded-full bg-black/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem]  p-3 ">
               <img
-                src="/garmin-apple.png"
+                src="https://web.macroaura.com/public/garmin-apple.png"
                 alt="MacroAura Garmin and Apple Watch integration preview"
                 className="h-auto w-full rounded-[1.45rem] object-cover"
               />

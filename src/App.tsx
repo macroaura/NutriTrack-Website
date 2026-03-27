@@ -50,7 +50,7 @@ function GAListener() {
 
   const baseUrl = 'https://www.macroaura.com'
   const canonicalUrl = `${baseUrl}${path === '*' ? '/' : path}`
-  const ogImage = `${baseUrl}/logo-small.png`
+  const ogImage = `https://web.macroaura.com/public/logo-small.png`
 
   useEffect(() => {
     if (import.meta.env.PROD) {

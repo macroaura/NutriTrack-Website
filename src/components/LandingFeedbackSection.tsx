@@ -68,7 +68,7 @@ const haloRings = [
   },
 ]
 
-const phoneScreen = { src: "/fooddetails.svg", alt: "Food details screen" }
+const phoneScreen = { src: "https://web.macroaura.com/public/fooddetails.svg", alt: "Food details screen" }
 
 export default function LandingFeedbackSection() {
   return (
@@ -159,7 +159,7 @@ export default function LandingFeedbackSection() {
               className="absolute left-0 top-[25%] z-20 w-[9rem] sm:left-[4%] sm:w-[15.5rem] lg:left-[7%] lg:top-[15%] lg:w-[18rem]"
             >
               <img
-                src="/caloriecard.png"
+                src="https://web.macroaura.com/public/caloriecard.png"
                 alt="Calories left preview"
                 className="h-auto w-full shadow-[0_18px_45px_rgba(27,30,29,0.10)]"
               />
@@ -173,7 +173,7 @@ export default function LandingFeedbackSection() {
               className="absolute bottom-[13%] left-0 z-20 w-[9rem] sm:left-[3%] sm:w-[14.5rem] lg:left-[4%] lg:bottom-[16%] lg:w-[17rem]"
             >
               <img
-                src="/macrotracker.png"
+                src="https://web.macroaura.com/public/macrotracker.png"
                 alt="Macro tracker preview"
                 className="h-auto w-full  shadow-[0_18px_45px_rgba(27,30,29,0.10)]"
               />
@@ -189,7 +189,7 @@ export default function LandingFeedbackSection() {
             >
               
               <img
-                src="/stepcard.png"
+                src="https://web.macroaura.com/public/stepcard.png"
                 alt="Steps today preview"
                 className="h-auto w-full shadow-[0_18px_45px_rgba(27,30,29,0.10)]"
               />
@@ -203,7 +203,7 @@ export default function LandingFeedbackSection() {
               className="absolute right-[5%] top-[13%] z-20 w-[9rem] sm:right-[10%] sm:w-[14.5rem] lg:right-[16%] lg:top-[7%] lg:w-[18rem]"
             >
               <img
-                src="/lunch-run.png"
+                src="https://web.macroaura.com/public/lunch-run.png"
                 alt="Lunch run preview"
                 className="h-auto w-full rounded-[.3rem] shadow-[0_18px_45px_rgba(27,30,29,0.10)]"
               />
@@ -230,7 +230,7 @@ export default function LandingFeedbackSection() {
                 />
               </div>
               <img
-                src="/hand-with-phone.avif"
+                src="https://web.macroaura.com/public/hand-with-phone.avif"
                 alt="MacroAura app in hand"
                 className="relative z-10 h-auto w-full"
               />

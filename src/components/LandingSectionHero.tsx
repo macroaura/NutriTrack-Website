@@ -5,7 +5,7 @@ export default function LandingSectionHero() {
   return (
     <section id="landing-section-hero" className="relative min-h-screen overflow-hidden bg-black text-white">
       <img
-        src="/running.jpg"
+        src="https://web.macroaura.com/public/running.jpg"
         alt="Runner moving across an open hillside"
         className="absolute inset-0 h-full w-full object-cover"
       />
@@ -44,7 +44,7 @@ export default function LandingSectionHero() {
             className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-lg font-semibold text-gray-950 shadow-2xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/95 hover:shadow-[0_24px_60px_rgba(0,0,0,0.28)]"
           >
             <img
-              src="/apple.svg"
+              src="https://web.macroaura.com/public/apple.svg"
               alt=""
               aria-hidden="true"
               className="h-5 w-4"

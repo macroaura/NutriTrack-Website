@@ -86,7 +86,7 @@ export default function LandingHero() {
               >
                 <div className="overflow-hidden rounded-[2rem]">
                   <img
-                    src="/app-home.png"
+                    src="https://web.macroaura.com/public/app-home.png"
                     className="h-auto w-full"
                     alt="MacroAura Macro Counter App Interface"
                   />

@@ -22,7 +22,7 @@ export default function Landing() {
         <meta property="og:url" content="https://www.macroaura.com/" />
         <meta property="og:title" content="MacroAura — Macro Counter & Protein Tracker App" />
         <meta property="og:description" content="MacroAura is the ultimate calorie and macro tracker. Use our daily macros log, macro calculator, and diet app features to build better habits." />
-        <meta property="og:image" content="https://www.macroaura.com/logo-small.png" />
+        <meta property="og:image" content="https://web.macroaura.com/public/logo-small.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         {/* Twitter Card */}
@@ -30,7 +30,7 @@ export default function Landing() {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:title" content="MacroAura — Macro Counter & Protein Tracker App" />
         <meta name="twitter:description" content="MacroAura is the ultimate calorie and macro tracker. Use our daily macros log, macro calculator, and diet app features to build better habits." />
-        <meta name="twitter:image" content="https://www.macroaura.com/logo-small.png" />
+        <meta name="twitter:image" content="https://web.macroaura.com/public/logo-small.png" />
         <meta name="keywords" content="macro counter, macro app, track macros app, macro calculator, daily macros log, macro diet app, protein tracker app, calorie and macro tracker, weight tracker" />
         {/* JSON-LD Organization & SoftwareApplication Schema */}
         <script type="application/ld+json">
@@ -52,7 +52,7 @@ export default function Landing() {
                   "@type": "Organization",
                   "name": "MacroAura",
                   "url": "https://www.macroaura.com/",
-                  "logo": "https://www.macroaura.com/logo-small.png",
+                  "logo": "https://web.macroaura.com/public/logo-small.png",
                   "description": "MacroAura helps you log meals, analyze macros, and build better nutrition habits with personalized insights.",
                   "sameAs": [
                     "https://twitter.com/macroaura.co",

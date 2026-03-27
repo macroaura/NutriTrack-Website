@@ -105,7 +105,7 @@ export default function Navbar() {
       >
         <Link to="/" className="group flex items-center gap-3 rounded-full px-3 py-2 cursor-pointer md:px-0 md:py-0">
           <img
-            src={useLightTheme ? '/macroaura-white-logo.png' : '/macroaura-black-logo.png'}
+            src={useLightTheme ? 'https://web.macroaura.com/public/macroaura-white-logo.png' : 'https://web.macroaura.com/public/macroaura-black-logo.png'}
             alt="MacroAura logo"
             width={60}
             height={60}

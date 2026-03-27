@@ -49,7 +49,7 @@ export default function Footer() {
           <div className="flex flex-col gap-10">
             <div>
               <Link to="/" className="inline-flex items-center gap-3">
-                <img src="/logo-small.png" alt="MacroAura" className="h-10 w-10 rounded-xl" />
+                <img src="https://web.macroaura.com/public/logo-small.png" alt="MacroAura" className="h-10 w-10 rounded-xl" />
                 <span className="text-[1.9rem] font-semibold tracking-[-0.05em] text-black">MacroAura</span>
               </Link>
               <p className="mt-3 text-sm text-black/45">© AuraLabs LLC, {new Date().getFullYear()}</p>

@@ -5,7 +5,7 @@ export default function LandingGymSection() {
     <section className="relative h-[24rem] w-full overflow-hidden sm:h-[32rem] lg:h-[48rem]">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/gym.jpg')" }}
+        style={{ backgroundImage: "url('https://web.macroaura.com/public/gym.jpg')" }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.08)_38%,rgba(0,0,0,0.2)_100%)]" />
@@ -36,7 +36,7 @@ export default function LandingGymSection() {
       >
         <div className="pointer-events-none absolute inset-x-[16%] bottom-2 h-8 rounded-full bg-black/28 blur-xl lg:h-10" />
         <img
-          src="/exerciseview.png"
+          src="https://web.macroaura.com/public/exerciseview.png"
           alt="Exercise view preview"
           className="relative h-auto w-6/10 lg:w-8/10 shadow-[0_26px_55px_rgba(0,0,0,0.26)]"
         />

@@ -23,3 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Images
+public/*.png
+public/*.jpg
+public/*.jpeg
+public/*.gif
+public/*.webp
+public/*.avif
+public/*.svg
