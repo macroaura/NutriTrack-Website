@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
 
 export default function Privacy() {
@@ -58,7 +57,7 @@ export default function Privacy() {
       <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
         <Navbar />
 
-        <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+        <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 pt-40">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-4">Privacy Policy</h1>
           <p className="text-sm text-gray-500 mb-10">Last updated: {new Date().toLocaleDateString()}</p>
 
@@ -67,7 +66,7 @@ export default function Privacy() {
               <p className="text-gray-600 leading-relaxed">
                 We collect the data you give us (account info, food and weight logs, calories burned) to help you
                 track your progress. We don’t sell your data. Everything is deleted if you delete your account.
-                Must be 18+ to use.
+                Must be 13+ to use.
               </p>
             </div>
 
@@ -156,8 +155,8 @@ export default function Privacy() {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">9. Children</h2>
             <p className="text-gray-600 leading-relaxed">
-              MacroAura is intended for users aged 18 and older. We do not knowingly collect data from anyone
-              under 18. If we learn that a user under 18 has created an account, we will delete it immediately.
+              MacroAura is intended for users aged 13 and older. We do not knowingly collect data from anyone
+              under 13. If we learn that a user under 13 has created an account, we will delete it immediately.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">10. Data Transfers</h2>
@@ -181,12 +180,6 @@ export default function Privacy() {
             </p>
           </section>
 
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <Link to="/" className="inline-flex items-center text-sm font-semibold text-main hover:text-main-dark transition-colors">
-              <i className="fas fa-arrow-left mr-2"></i>
-              Back to Home
-            </Link>
-          </div>
         </main>
 
         <Footer />

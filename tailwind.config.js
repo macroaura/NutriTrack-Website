@@ -13,8 +13,8 @@ export default {
                 surface: '#F3F4F6', // Light gray surface
             },
             fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
-                display: ['Outfit', 'system-ui', 'sans-serif'],
+                sans: ['Archivo', 'sans-serif'],
+                display: ['Archivo', 'sans-serif'],
             },
         },
     },

@@ -314,7 +314,7 @@ function addRouteAndMarkers(
       display: flex; align-items: center; justify-content: center;
       font-size: 8px; font-weight: 700;
       color: #fff;
-      font-family: system-ui, sans-serif;
+      font-family: Archivo, sans-serif;
       box-shadow: 0 1px 4px rgba(0,0,0,0.35);
       cursor: pointer;
       user-select: none;
@@ -326,7 +326,7 @@ function addRouteAndMarkers(
       offset: 14,
       className: 'mile-popup',
     }).setHTML(`
-      <div style="font-family:system-ui,sans-serif;padding:8px 10px;min-width:110px">
+      <div style="font-family:Archivo,sans-serif;padding:8px 10px;min-width:110px">
         <div style="font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Mile ${marker.mile}</div>
         <div style="display:flex;justify-content:space-between;gap:12px">
           <div>

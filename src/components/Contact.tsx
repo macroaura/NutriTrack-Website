@@ -7,7 +7,7 @@ export default function Contact() {
         <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
             <Navbar />
 
-            <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+            <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 pt-30">
                 <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-4">Contact Us</h1>
                 <p className="text-lg text-gray-600 mb-10">We’re here to help you make the most of MacroAura.</p>
 
@@ -16,10 +16,15 @@ export default function Contact() {
                         <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Technical Support</h2>
                             <p className="text-gray-600 leading-relaxed">
-                                Need help using MacroAura? Visit our{" "}
-                                <Link to="/support-center" className="text-main hover:text-main-dark font-medium transition-colors">
-                                    Support Center
-                                </Link>{" "}
+                                Need help using MacroAura? Check our{" "}
+                                <a
+                                    href="https://macroaura.notion.site/MacroAura-Frequently-Asked-Questions-703df05260b582c790a801c7d48823c4"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-main hover:text-main-dark font-medium transition-colors"
+                                >
+                                    FAQ
+                                </a>{" "}
                                 for FAQs, troubleshooting guides, and step-by-step tips. If you can’t find your answer, our support
                                 team is happy to assist — just email{" "}
                                 <a href="mailto:support@macroaura.com" className="text-main hover:text-main-dark font-medium transition-colors">
@@ -81,6 +86,17 @@ export default function Contact() {
                                         <i className="fab fa-tiktok mr-2"></i>
                                         TikTok
                                     </a>
+                                </li>
+                                <li>
+                                            <a
+                                href="https://www.reddit.com/user/MacroAura"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="transition-transform duration-200 hover:-translate-y-0.5 hover:text-main"
+                                aria-label="Reddit"
+                            >
+                                <i className="fab fa-reddit"></i>
+                            </a>
                                 </li>
                             </ul>
                         </div>
