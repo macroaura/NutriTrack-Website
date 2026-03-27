@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import './App.css'
 import Landing from './pages/Landing'
 import Privacy from './pages/Privacy'
 import { gaEvent } from './analytics'
-import Support from './pages/Support'
-import TermsOfService from './pages/TermsOfService'
 import Contact from './components/Contact'
 import SEOPage from './pages/SEOPage'
 import { seoPages } from './data/seo-pages'
@@ -25,14 +24,6 @@ function GAListener() {
     case '/auth/action':
       title = 'Auth Action • MacroAura'
       description = 'Handle Firebase auth actions like reset password and verify email.'
-      break
-    case '/support-center':
-      title = 'Support • MacroAura'
-      description = 'Get help, explore FAQs, or contact MacroAura support for quick answers.'
-      break
-    case '/terms-of-service':
-      title = 'Terms of Service • MacroAura'
-      description = 'Review the terms and conditions for using MacroAura.'
       break
     case '/contact-us':
       title = 'Contact Us • MacroAura'
@@ -59,7 +50,7 @@ function GAListener() {
 
   const baseUrl = 'https://www.macroaura.com'
   const canonicalUrl = `${baseUrl}${path === '*' ? '/' : path}`
-  const ogImage = `${baseUrl}/logo-small.png`
+  const ogImage = `https://web.macroaura.com/public/logo-small.png`
 
   useEffect(() => {
     if (import.meta.env.PROD) {
@@ -88,17 +79,43 @@ function GAListener() {
   )
 }
 
-export default function App() {
+function AppRoutes() {
+  const location = useLocation()
+  const shouldReduceMotion = useReducedMotion()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <GAListener />
-        <Routes>
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.div
+        key={location.key}
+        initial={
+          shouldReduceMotion
+            ? { opacity: 0 }
+            : { opacity: 0 }
+        }
+        animate={
+          shouldReduceMotion
+            ? { opacity: 1 }
+            : { opacity: 1 }
+        }
+        exit={
+          shouldReduceMotion
+            ? { opacity: 0 }
+            : { opacity: 0 }
+        }
+        transition={{
+          duration: shouldReduceMotion ? 0.18 : 0.28,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="min-h-screen"
+      >
+        <Routes location={location}>
           <Route path="/" element={<Landing />} />
           <Route path="/auth/action" element={<AuthAction />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/support-center" element={<Support />} />
-          <Route path='/terms-of-service' element={<TermsOfService />} />
           <Route path="/contact-us" element={<Contact />} />
 
           {/* Shared workout pages */}
@@ -115,6 +132,17 @@ export default function App() {
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
+
+export default function App() {
+  return (
+    <HelmetProvider>
+      <BrowserRouter>
+        <GAListener />
+        <AppRoutes />
       </BrowserRouter>
     </HelmetProvider>
   )
