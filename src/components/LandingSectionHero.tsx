@@ -1,13 +1,17 @@
+import { useState } from "react"
 import { gaEvent } from "../analytics"
 import { motion } from "framer-motion"
 
 export default function LandingSectionHero() {
+  const [loaded, setLoaded] = useState(false)
+
   return (
     <section id="landing-section-hero" className="relative min-h-screen overflow-hidden bg-black text-white">
       <img
         src="https://web.macroaura.com/public/running.jpg"
         alt="Runner moving across an open hillside"
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${loaded ? "opacity-100" : "opacity-0"}`}
+        onLoad={() => setLoaded(true)}
       />
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/45" />
