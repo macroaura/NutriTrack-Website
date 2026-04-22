@@ -5,7 +5,6 @@ import LandingPhoneShowcase from "../components/LandingPhoneShowcase"
 import LandingFeedbackSection from "../components/LandingFeedbackSection"
 import LandingGymSection from "../components/LandingGymSection"
 import LandingWearablesSection from "../components/LandingWearablesSection"
-import LandingFeaturesGrid from "../components/LandingFeaturesGrid"
 import LandingDownloadCTA from "../components/LandingDownloadCTA"
 import { Helmet } from "react-helmet-async"
 
